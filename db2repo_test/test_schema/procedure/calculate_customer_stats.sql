@@ -1,10 +1,10 @@
-CREATE OR REPLACE PROCEDURE DB2REPO_TEST.TEST_SCHEMA.CALCULATE_CUSTOMER_STATS (CUSTOMER_ID_PARAM VARCHAR)
+CREATE OR REPLACE PROCEDURE TEST_SCHEMA.CALCULATE_CUSTOMER_STATS (CUSTOMER_ID_PARAM VARCHAR)
 RETURNS OBJECT
 LANGUAGE JAVASCRIPT
 AS
 $$
 function calculateStats(customerId) {
-    // Query to get customer data
+    // Query to get customer data test test test
     var customerQuery = `SELECT FIRST_NAME, LAST_NAME FROM CUSTOMERS WHERE CUSTOMER_ID = ${customerId}`;
     var customerResult = snowflake.execute({sqlText: customerQuery});
     
